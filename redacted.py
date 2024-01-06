@@ -1,12 +1,25 @@
-from tkinter import *
+import time
+prompt = "A. hi what's up \n"
+time.sleep(5)
+print("Person: oh")
+time.sleep(2)
+print("Person: hey")
 
-window = Tk() # start of window code, pops up window
-window.geometry("480x480+0+0") # dimensions of window and location of the window
-window.title("Khloe") # title of window
+time.sleep(1)
+response = input(prompt)
+while response.lower() != "a":
+    response = input(prompt)
 
-icon = PhotoImage(file="redacted.png") # defines icon as photoimage file
-window.iconphoto(True, icon) # makes icon the iconphoto of window 'window'
+time.sleep(1)
+print("Person: nothing much")
+time.sleep(0.5)
+print("Person: u?")
 
-window.config(background="black")
+time.sleep(1)
+prompt = "A. using this program \n"
+response = input(prompt)
+while response.lower() != "a":
+    response = input(prompt)
 
-window.mainloop() # end of window code
+time.sleep(1)
+print("Person: crazy")

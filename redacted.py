@@ -10,9 +10,9 @@ def typewriter(message, interval):
             print(char, end = "", flush = True)
             time.sleep(interval)
     print("\n")
-# makes a typewriting effect for printed statements
+makes a typewriting effect for printed statements
 
-prompt = "A. hi what's up:"
+prompt = "A. hi what's up"
 time.sleep(5)
 typewriter("????: oh", .1)
 time.sleep(2)
@@ -20,9 +20,8 @@ typewriter("????: hey",.1)
 
 time.sleep(1)
 while True:
-    print(prompt)
-    response = input()
-    if response.lower() == "a":
+    response = input(f"{prompt} : ")
+    if response.lower() == "hi what's up":
         break
 # loop until input is correct
 
@@ -46,4 +45,25 @@ typewriter("...", 3)
 
 typewriter("????: what do you want to talk about?", .1)
 
-prompt = "A. working out B. math C. family and friends D. [redacted]"
+prompt = "A. programming B. math C. family and friends D. [redacted]"
+
+redacted = {
+
+}
+
+topics = { 
+    "programming" : "oh I love programming! There's just something so fun about creating something with pure logic :>",
+    "math" : "best subject fr. I love working with numbers!" 
+    " There's just something beautiful with how all of the universe can be represented through mathematics," 
+    " corny as it sounds.",
+    "family and friends" : "my family and friends mean so much to me, they're the ones who build my character,"
+    " I would give them the universe.",
+    "redacted" : redacted
+    
+}
+while True:
+    response = input(f"{prompt} : ")
+    response = response.lower()
+    if response in topics.keys():
+        break
+typewriter(topics[response], 0.05)
